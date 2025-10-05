@@ -7,7 +7,7 @@ pipeline {
     NODE_OPTIONS = '--max-old-space-size=2048'
   }
 
-  stages {
+  stages{
     stage('Checkout Code') {
       steps {
         git url: 'https://github.com/Anandh-developer/Wdiorepo.git', branch: 'main'
