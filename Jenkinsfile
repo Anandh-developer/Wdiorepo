@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'windows'
-  }
+  agent any
 
   environment {
     NODE_OPTIONS = '--max-old-space-size=2048'
