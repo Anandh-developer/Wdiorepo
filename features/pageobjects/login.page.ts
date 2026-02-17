@@ -25,6 +25,14 @@ class LoginPage extends Page {
      * e.g. to login using username and password
      */
     public async login (username: string, password: string) {
+        username="";
+        password="";
+        console.log("Username and password are set to empty strings for security reasons.");
+        console.log(`username: ${username}`);
+        console.log(`password: ${password}`);
+        username = process.env.APP_CREDS_USR ?? username;
+        password = process.env.APP_CREDS_PWD ?? password;
+
         await this.inputUsername.setValue(username);
         await this.inputPassword.setValue(password);
         await this.btnSubmit.click();
